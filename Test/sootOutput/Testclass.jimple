@@ -1,0 +1,264 @@
+public class Testclass extends java.lang.Object
+{
+
+    public static int[] mergeSort(int[])
+    {
+        int[] list, first, second, temp$9, temp$10;
+        int temp$0, temp$1, temp$2, temp$3, temp$4, temp$5, temp$6, temp$7, temp$8;
+
+        list := @parameter0: int[];
+        temp$0 = lengthof list;
+        if temp$0 <= 1 goto label0;
+
+        goto label1;
+
+     label0:
+        nop;
+        return list;
+
+     label1:
+        nop;
+        temp$1 = lengthof list;
+        temp$2 = temp$1 / 2;
+        first = newarray (int)[temp$2];
+        temp$3 = lengthof list;
+        temp$4 = lengthof first;
+        temp$5 = temp$3 - temp$4;
+        second = newarray (int)[temp$5];
+        temp$6 = lengthof first;
+        staticinvoke <java.lang.System: void arraycopy(java.lang.Object,int,java.lang.Object,int,int)>(list, 0, first, 0, temp$6);
+        temp$7 = lengthof first;
+        temp$8 = lengthof second;
+        staticinvoke <java.lang.System: void arraycopy(java.lang.Object,int,java.lang.Object,int,int)>(list, temp$7, second, 0, temp$8);
+        temp$9 = staticinvoke <Testclass: int[] mergeSort(int[])>(first);
+        temp$10 = staticinvoke <Testclass: int[] mergeSort(int[])>(second);
+        staticinvoke <Testclass: void merge(int[],int[],int[])>(first, second, list);
+        return list;
+    }
+
+    private static final void merge(int[], int[], int[])
+    {
+        int[] first, second, result, temp$2, temp$4, temp$8, temp$10, temp$15, temp$17;
+        int iFirst, iSecond, j, temp$0, temp$1, temp$3, temp$5, temp$6, temp$7, temp$9, temp$11, temp$12, temp$13, temp$14, temp$16, temp$18, temp$19, temp$20, temp$21, temp$22, temp$23, temp$24, temp$25, temp$26, temp$27;
+
+        first := @parameter0: int[];
+        second := @parameter1: int[];
+        result := @parameter2: int[];
+        iFirst = 0;
+        iSecond = 0;
+        j = 0;
+
+     label0:
+        nop;
+        temp$0 = lengthof first;
+        if iFirst < temp$0 goto label1;
+
+        goto label6;
+
+     label1:
+        nop;
+        temp$1 = lengthof second;
+        if iSecond < temp$1 goto label2;
+
+        goto label6;
+
+        goto label2;
+
+     label2:
+        nop;
+        temp$2 = first;
+        temp$3 = iFirst;
+        temp$4 = second;
+        temp$5 = iSecond;
+        temp$6 = temp$2[temp$3];
+        temp$7 = temp$4[temp$5];
+        if temp$6 < temp$7 goto label3;
+
+        goto label4;
+
+     label3:
+        nop;
+        temp$8 = result;
+        temp$9 = j;
+        temp$10 = first;
+        temp$11 = iFirst;
+        temp$12 = temp$10[temp$11];
+        temp$8[temp$9] = temp$12;
+        temp$13 = iFirst;
+        temp$14 = temp$13 + 1;
+        iFirst = temp$14;
+        goto label5;
+
+     label4:
+        nop;
+        temp$15 = result;
+        temp$16 = j;
+        temp$17 = second;
+        temp$18 = iSecond;
+        temp$19 = temp$17[temp$18];
+        temp$15[temp$16] = temp$19;
+        temp$20 = iSecond;
+        temp$21 = temp$20 + 1;
+        iSecond = temp$21;
+
+     label5:
+        nop;
+        temp$22 = j;
+        temp$23 = temp$22 + 1;
+        j = temp$23;
+        goto label0;
+
+     label6:
+        nop;
+        temp$24 = lengthof first;
+        temp$25 = temp$24 - iFirst;
+        staticinvoke <java.lang.System: void arraycopy(java.lang.Object,int,java.lang.Object,int,int)>(first, iFirst, result, j, temp$25);
+        temp$26 = lengthof second;
+        temp$27 = temp$26 - iSecond;
+        staticinvoke <java.lang.System: void arraycopy(java.lang.Object,int,java.lang.Object,int,int)>(second, iSecond, result, j, temp$27);
+        return;
+    }
+
+    public static void main(java.lang.String[]) throws java.lang.Exception
+    {
+        java.lang.String[] args;
+        java.lang.String list, temp$9, temp$36;
+        int i, n, intelement, temp$11, temp$14, j, temp$19, temp$22, temp$23, temp$24, j, temp$30, temp$34, temp$35, temp$37, temp$38;
+        Testclass s, temp$0;
+        java.util.ArrayList arrlist, temp$1;
+        java.io.PrintStream temp$2, temp$3, temp$4, temp$5, temp$26, temp$27, temp$28, temp$29, temp$31;
+        java.io.BufferedReader bf, temp$6;
+        java.io.InputStreamReader temp$7;
+        java.io.InputStream temp$8;
+        boolean temp$10, temp$13, temp$17;
+        java.lang.Integer temp$12, temp$21;
+        int[] elementlist, temp$18, temp$25, temp$33;
+        java.util.Iterator iter, temp$15, temp$16;
+        java.lang.Object temp$20;
+        java.lang.StringBuffer temp$32;
+
+        args := @parameter0: java.lang.String[];
+        list = "";
+        i = 0;
+        n = 0;
+        temp$0 = new Testclass;
+        specialinvoke temp$0.<Testclass: void <init>()>();
+        s = temp$0;
+        temp$1 = new java.util.ArrayList;
+        specialinvoke temp$1.<java.util.ArrayList: void <init>()>();
+        arrlist = temp$1;
+        temp$2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$2.<java.io.PrintStream: void println(java.lang.String)>(" ");
+        temp$3 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$3.<java.io.PrintStream: void println(java.lang.String)>(" ");
+        temp$4 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$4.<java.io.PrintStream: void println(java.lang.String)>("Please enter the list of elements,one element per line");
+        temp$5 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$5.<java.io.PrintStream: void println(java.lang.String)>(" write \'STOP\' when list is completed ");
+        temp$6 = new java.io.BufferedReader;
+        temp$7 = new java.io.InputStreamReader;
+        temp$8 = <java.lang.System: java.io.InputStream in>;
+        specialinvoke temp$7.<java.io.InputStreamReader: void <init>(java.io.InputStream)>(temp$8);
+        specialinvoke temp$6.<java.io.BufferedReader: void <init>(java.io.Reader)>(temp$7);
+        bf = temp$6;
+
+     label0:
+        nop;
+        temp$9 = virtualinvoke bf.<java.io.BufferedReader: java.lang.String readLine()>();
+        list = temp$9;
+        temp$10 = virtualinvoke temp$9.<java.lang.String: boolean equalsIgnoreCase(java.lang.String)>("stop");
+        if temp$10 == 0 goto label1;
+
+        goto label2;
+
+     label1:
+        nop;
+        temp$11 = staticinvoke <java.lang.Integer: int parseInt(java.lang.String)>(list);
+        intelement = temp$11;
+        temp$12 = staticinvoke <java.lang.Integer: java.lang.Integer valueOf(int)>(intelement);
+        temp$13 = virtualinvoke arrlist.<java.util.ArrayList: boolean add(java.lang.Object)>(temp$12);
+        goto label0;
+
+     label2:
+        nop;
+        temp$14 = virtualinvoke arrlist.<java.util.ArrayList: int size()>();
+        elementlist = newarray (int)[temp$14];
+        temp$15 = virtualinvoke arrlist.<java.util.ArrayList: java.util.Iterator iterator()>();
+        temp$16 = (java.util.Iterator) temp$15;
+        iter = temp$16;
+        j = 0;
+
+     label3:
+        nop;
+        temp$17 = interfaceinvoke iter.<java.util.Iterator: boolean hasNext()>();
+        if temp$17 == 0 goto label5;
+
+        goto label4;
+
+     label4:
+        nop;
+        temp$18 = elementlist;
+        temp$19 = j;
+        temp$20 = interfaceinvoke iter.<java.util.Iterator: java.lang.Object next()>();
+        temp$21 = (java.lang.Integer) temp$20;
+        temp$22 = virtualinvoke temp$21.<java.lang.Integer: int intValue()>();
+        temp$18[temp$19] = temp$22;
+        nop;
+        temp$23 = j;
+        temp$24 = temp$23 + 1;
+        j = temp$24;
+        goto label3;
+
+     label5:
+        nop;
+        temp$25 = staticinvoke <Testclass: int[] mergeSort(int[])>(elementlist);
+        elementlist = temp$25;
+        temp$26 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$26.<java.io.PrintStream: void println(java.lang.String)>(" ");
+        temp$27 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$27.<java.io.PrintStream: void println(java.lang.String)>(" ");
+        temp$28 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$28.<java.io.PrintStream: void println(java.lang.String)>(" ");
+        temp$29 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$29.<java.io.PrintStream: void println(java.lang.String)>("Values after Merge Sort : ");
+        j = 0;
+
+     label6:
+        nop;
+        temp$30 = lengthof elementlist;
+        if j < temp$30 goto label7;
+
+        goto label8;
+
+     label7:
+        nop;
+        temp$31 = <java.lang.System: java.io.PrintStream out>;
+        temp$32 = new java.lang.StringBuffer;
+        specialinvoke temp$32.<java.lang.StringBuffer: void <init>()>();
+        temp$33 = elementlist;
+        temp$34 = j;
+        temp$35 = temp$33[temp$34];
+        virtualinvoke temp$32.<java.lang.StringBuffer: java.lang.StringBuffer append(int)>(temp$35);
+        virtualinvoke temp$32.<java.lang.StringBuffer: java.lang.StringBuffer append(java.lang.Object)>(" ");
+        temp$36 = virtualinvoke temp$32.<java.lang.StringBuffer: java.lang.String toString()>();
+        virtualinvoke temp$31.<java.io.PrintStream: void println(java.lang.String)>(temp$36);
+        nop;
+        temp$37 = j;
+        temp$38 = temp$37 + 1;
+        j = temp$38;
+        goto label6;
+
+     label8:
+        nop;
+        return;
+    }
+
+    public void <init>()
+    {
+        Testclass this;
+
+        this := @this: Testclass;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}
