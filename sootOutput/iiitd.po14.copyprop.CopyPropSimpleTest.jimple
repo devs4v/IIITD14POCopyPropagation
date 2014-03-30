@@ -1,0 +1,29 @@
+public class iiitd.po14.copyprop.CopyPropSimpleTest extends java.lang.Object
+{
+
+    public static void main(java.lang.String[])
+    {
+        java.lang.String[] args;
+        int x, y, temp$0, z, temp$1;
+        java.io.PrintStream temp$2;
+
+        args := @parameter0: java.lang.String[];
+        temp$0 = 2;
+        x = temp$0;
+        y = x;
+        temp$1 = y;
+        z = temp$1 + 2;
+        temp$2 = <java.lang.System: java.io.PrintStream out>;
+        virtualinvoke temp$2.<java.io.PrintStream: void println(int)>(z);
+        return;
+    }
+
+    public void <init>()
+    {
+        iiitd.po14.copyprop.CopyPropSimpleTest this;
+
+        this := @this: iiitd.po14.copyprop.CopyPropSimpleTest;
+        specialinvoke this.<java.lang.Object: void <init>()>();
+        return;
+    }
+}

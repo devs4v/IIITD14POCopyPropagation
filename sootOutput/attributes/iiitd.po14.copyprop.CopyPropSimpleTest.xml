@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<attributes>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="4" eline="4" spos="0" epos="0"/>
+<text info="[args]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="8" eline="8" spos="3" epos="3"/>
+<jmpPos sline="11" eline="11" spos="0" epos="0"/>
+<text info="Live Variable: temp$0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="11" eline="11" spos="8" epos="14"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="8" eline="8" spos="3" epos="3"/>
+<jmpPos sline="12" eline="12" spos="0" epos="0"/>
+<text info="Live Variable: x" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="12" eline="12" spos="8" epos="9"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="9" eline="9" spos="3" epos="3"/>
+<jmpPos sline="13" eline="13" spos="0" epos="0"/>
+<text info="Live Variable: y" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="13" eline="13" spos="8" epos="9"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="11" eline="11" spos="3" epos="16"/>
+<jmpPos sline="14" eline="14" spos="0" epos="0"/>
+<text info="Live Variable: temp$1" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="14" eline="14" spos="8" epos="14"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="11" eline="11" spos="3" epos="16"/>
+<jmpPos sline="15" eline="15" spos="0" epos="0"/>
+<text info="Live Variable: z" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="15" eline="15" spos="8" epos="9"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="12" eline="12" spos="3" epos="24"/>
+<jmpPos sline="16" eline="16" spos="0" epos="0"/>
+<text info="Live Variable: temp$2" aType="Live Variable"/>
+<text info="Live Variable: z" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="16" eline="16" spos="8" epos="14"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="21" eline="21" spos="0" epos="0"/>
+<text info="[]" aType="ParamNamesTag"/>
+</attribute>
+<attribute>
+<srcPos sline="3" eline="3" spos="0" epos="0"/>
+<jmpPos sline="25" eline="25" spos="0" epos="0"/>
+<text info="Live Variable: this" aType="Live Variable"/>
+</attribute>
+<attribute>
+<srcPos sline="0" eline="0" spos="0" epos="0"/>
+<jmpPos sline="25" eline="25" spos="8" epos="12"/>
+<color r="45" g="255" b="84" fg="0" aType="Live Variable"/>
+</attribute>
+</attributes>
