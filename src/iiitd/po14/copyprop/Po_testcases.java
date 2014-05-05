@@ -1,3 +1,5 @@
+package iiitd.po14.copyprop;
+
 import java.util.Scanner;
 
 //import java.util.*;
