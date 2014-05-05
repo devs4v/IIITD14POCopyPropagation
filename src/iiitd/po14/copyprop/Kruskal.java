@@ -5,9 +5,12 @@ import java.util.*;
 
 public class Kruskal {
   private final int MAX_NODES = 21;
-  private HashSet nodes[];               // Array of connected components
-  private TreeSet allEdges;              // Priority queue of Edge objects
-  private Vector allNewEdges;            // Edges in Minimal-Spanning Tree
+  @SuppressWarnings("rawtypes")
+private HashSet nodes[];               // Array of connected components
+  @SuppressWarnings("rawtypes")
+private TreeSet allEdges;              // Priority queue of Edge objects
+  @SuppressWarnings("rawtypes")
+private Vector allNewEdges;            // Edges in Minimal-Spanning Tree
 
   public static void main(String args[]) {
     System.out.println("Running [Kruskal] - 2000");
@@ -21,14 +24,16 @@ public class Kruskal {
     k.printFinalEdges();
   }
 
-  Kruskal() {
+  @SuppressWarnings({ "unchecked", "rawtypes" })
+Kruskal() {
     // Constructor
     nodes = new HashSet[MAX_NODES];      // Create array for components
     allEdges = new TreeSet(new Edge());  // Create empty priority queue
     allNewEdges = new Vector(MAX_NODES); // Create vector for MST edges
   }
 
-  private void readInGraphData(String fileName) {
+  @SuppressWarnings({ "unchecked", "rawtypes" })
+private void readInGraphData(String fileName) {
     try {
       FileReader file = new FileReader(fileName);
       BufferedReader buff = new BufferedReader(file);
@@ -60,7 +65,8 @@ public class Kruskal {
     }
   }
 
-  private void performKruskal() {
+  @SuppressWarnings({ "rawtypes", "unchecked" })
+private void performKruskal() {
     int size = allEdges.size();
     for (int i=0; i<size; i++) {
       Edge curEdge = (Edge) allEdges.first();
@@ -130,7 +136,8 @@ public class Kruskal {
     }
   }
 
-  class Edge implements Comparator {
+  @SuppressWarnings("rawtypes")
+class Edge implements Comparator {
     // Inner class for representing edge+end-points
     public int from, to, cost;
     public Edge() {

@@ -26,6 +26,7 @@ public class TestCases {
 	    	res=ob.calc(y,z);
 	    }
 		System.out.println("value of d is "+res);
+		sc.close();
 	}
 	
 

@@ -58,7 +58,8 @@ public class MergeSort {
     
     
     
-    public static void main(String args[]) throws Exception
+    @SuppressWarnings("unused")
+	public static void main(String args[]) throws Exception
     {
         String list="";
         int i=0,n=0;

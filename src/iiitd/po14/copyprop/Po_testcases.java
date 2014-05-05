@@ -17,6 +17,7 @@ public class Po_testcases {
 	    	res=ob.calc(y,z);
 	    }
 		System.out.println("value of d is "+res);
+		sc.close();
 	}
 	public int calc(int y, int z)
 	{

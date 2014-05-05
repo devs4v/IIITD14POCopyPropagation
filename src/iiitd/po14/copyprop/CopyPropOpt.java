@@ -56,6 +56,7 @@ public class CopyPropOpt {
 		PackManager.v().getPack("jtp").add(
 				new Transform("jtp.myTransform", new BodyTransformer() {
 
+					@SuppressWarnings({ "rawtypes", "unchecked" })
 					protected void internalTransform(Body body, String phase, Map opts) {
 						new SimpleCopyPropagationAnalysis(new ExceptionalUnitGraph(body));
 						// use G.v().out instead of System.out so that Soot can

@@ -64,6 +64,7 @@ public class CopyPropOpt2 {
 		PackManager.v().getPack("jtp").add(
 				new Transform("jtp.CopyPropTransform", new BodyTransformer() {
 
+					@SuppressWarnings({ "rawtypes", "unchecked" })
 					protected void internalTransform(Body body, String phase, Map opts) {
 						new SimpleCopyPropagationAnalysis(new ExceptionalUnitGraph(body));
 						// use G.v().out instead of System.out so that Soot can
@@ -247,6 +248,7 @@ public class CopyPropOpt2 {
 		PackManager.v().getPack("jtp").add(
 				new Transform("jtp.DeadCodeTransform", new BodyTransformer() {
 
+					@SuppressWarnings({ "rawtypes", "unused", "unchecked" })
 					protected void internalTransform(Body b, String phase, Map opts) {
 						new LiveVariablesAnalysis(new ExceptionalUnitGraph(b));
 						// use G.v().out instead of System.out so that Soot can
@@ -480,13 +482,13 @@ public class CopyPropOpt2 {
 		@SuppressWarnings("unchecked")
 		public SimpleCopyPropagationAnalysis(ExceptionalUnitGraph exceptionalUnitGraph) {
 			super(exceptionalUnitGraph);
-			//TODO remove doanalysis comment after all other todo's are over
+			
 			doAnalysis();
 		}
 
 		@Override
 		protected void flowThrough(Object in, Object d, Object out) {
-			// TODO function to transform the input to the output
+			
 			FlowSet FlowIn = (FlowSet) in,
 					FlowOut = (FlowSet) out;
 			Stmt s = (Stmt) d;
@@ -551,6 +553,7 @@ public class CopyPropOpt2 {
 	}
 
 
+@SuppressWarnings("rawtypes")
 public static class LiveVariablesAnalysis extends BackwardFlowAnalysis
 {
     protected void copy(Object src, Object dest)
@@ -607,7 +610,8 @@ public static class LiveVariablesAnalysis extends BackwardFlowAnalysis
         return new ArraySparseSet();
     }
 
-    LiveVariablesAnalysis(DirectedGraph g)
+    @SuppressWarnings("unchecked")
+	LiveVariablesAnalysis(DirectedGraph g)
     {
         super(g);
 
